@@ -10,6 +10,7 @@ const Body = props => {
   }, []);
 
   const [totalConfirmedCases, setTotalConfirmedCases] = useState("");
+  const [sourceLink, setSourceLink] = useState("");
 
   var date = moment().format("MMMM, Do YYYY");
   // console.log(date);
@@ -21,8 +22,9 @@ const Body = props => {
         "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
       )
       .then(function(response) {
-        // console.log(response.data.currentDay[0].totalConfirmedCases);
+        // console.log(response.data.currentDay[0]);
         setTotalConfirmedCases(response.data.currentDay[0].totalConfirmedCases);
+        setSourceLink(response.data.currentDay[0].source);
       })
       .catch(function(error) {
         console.log(error);
@@ -69,12 +71,17 @@ const Body = props => {
                 <p className='lead'>Last Updated: {date}</p>
                 <p>
                   Source:{" "}
-                  <a
-                    href='https://www.co.merced.ca.us/DocumentCenter/View/23921/COVID-19-Daily-Status-Update-32420?bidId='
-                    style={{ color: "var(--dark-shades)", fontWeight: "bold" }}
-                  >
-                    Merced County, Department Of Public Health
-                  </a>
+                  {sourceLink !== "" && (
+                    <a
+                      href={sourceLink}
+                      style={{
+                        color: "var(--dark-shades)",
+                        fontWeight: "bold"
+                      }}
+                    >
+                      Merced County, Department Of Public Health
+                    </a>
+                  )}
                 </p>
               </Container>
             </Jumbotron>
