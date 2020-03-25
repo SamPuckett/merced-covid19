@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import moment from "moment";
 import { Container, Row, Col, Jumbotron } from "reactstrap";
 import Spinner from "./Spinner";
 
@@ -10,12 +11,15 @@ const Body = props => {
 
   const [totalConfirmedCases, setTotalConfirmedCases] = useState("");
 
+  var date = moment().format("MMMM, Do YYYY");
+  // console.log(date);
+
   const getTotalConfirmedCases = () => {
     // Make a request for a user with a given ID
     axios
-      .get(
-        "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
-      )
+      .get
+      // "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
+      ()
       .then(function(response) {
         // console.log(response.data.currentDay[0].totalConfirmedCases);
         setTotalConfirmedCases(response.data.currentDay[0].totalConfirmedCases);
@@ -62,7 +66,7 @@ const Body = props => {
                     totalConfirmedCases
                   )}
                 </div>
-                <p className='lead'>Last Updated: March 25, 2020. 1:47 AM</p>
+                <p className='lead'>Last Updated: {date}</p>
                 <p>
                   Source:{" "}
                   <a
