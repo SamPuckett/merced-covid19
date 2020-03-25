@@ -1,13 +1,56 @@
+:root {
+  --custom-green: #003d2b;
+  --custom-tan: #f0eee9;
+  --custom-dark-tan: #d6d4cc;
+  --custom-red: #9b0842;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://res.cloudinary.com/dnrbgmcm4/image/upload/c_scale,q_auto:low,w_2312/v1585128301/Merced_Theatre_nyd9k9.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* NAVBAR */
+.main-navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* FOOTER */
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer a {
+  color: rgba(255, 255, 255, 0.5);
 }
