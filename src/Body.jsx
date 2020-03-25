@@ -15,11 +15,11 @@ const Body = props => {
   // console.log(date);
 
   const getTotalConfirmedCases = () => {
-    // Make a request for a user with a given ID
+    // Calls our REST API
     axios
-      .get
-      // "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
-      ()
+      .get(
+        "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
+      )
       .then(function(response) {
         // console.log(response.data.currentDay[0].totalConfirmedCases);
         setTotalConfirmedCases(response.data.currentDay[0].totalConfirmedCases);
