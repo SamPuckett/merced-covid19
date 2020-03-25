@@ -9,8 +9,8 @@ const MainNavBar = props => {
         style={{
           display: "flex",
           justifyContent: "center",
-          backgroundColor: "var(--custom-green)",
-          color: "var(--custom-tan)"
+          backgroundColor: "var(--light-shades)",
+          color: "var(--dark-shades)"
         }}
       >
         <NavbarBrand>Merced County COVID-19</NavbarBrand>
