@@ -1,8 +1,7 @@
 import React from "react";
-import {} from "reactstrap";
-import MainNavBar from "./MainNavBar";
-import Body from "./Body";
-import Footer from "./Footer";
+import MainNavBar from "./components/MainNavBar";
+import Body from "./components/Body";
+import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {

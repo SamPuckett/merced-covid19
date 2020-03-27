@@ -39,6 +39,23 @@ code {
   text-decoration: none;
 }
 
+/* BODY */
+.body-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.number-jumbotron {
+  border-radius: 20px;
+  background-color: var(--light-shades);
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
 /* FOOTER */
 .footer {
   background-color: rgba(0, 0, 0, 0.5);
