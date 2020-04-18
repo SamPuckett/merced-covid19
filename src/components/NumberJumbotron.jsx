@@ -21,12 +21,12 @@ const NumberJumbotron = () => {
       .get(
         "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
       )
-      .then(function(response) {
+      .then(function (response) {
         // console.log(response.data.currentDay[0]);
         setTotalConfirmedCases(response.data.currentDay[0].totalConfirmedCases);
         setSourceLink(response.data.currentDay[0].source);
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.log(error);
       });
   };
@@ -46,7 +46,7 @@ const NumberJumbotron = () => {
               href={sourceLink}
               style={{
                 color: "var(--dark-shades)",
-                fontWeight: "bold"
+                fontWeight: "bold",
               }}
             >
               Merced County, Department Of Public Health
