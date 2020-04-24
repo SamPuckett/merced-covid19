@@ -32,6 +32,7 @@ const GraphJumbotron = () => {
         "4/21",
         "4/22",
         "4/23",
+        "4/24",
       ],
       datasets: [
         {
@@ -60,6 +61,7 @@ const GraphJumbotron = () => {
             92,
             93,
             97,
+            100,
           ],
           backgroundColor: ["var(--test)"],
           borderWidth: 4,
