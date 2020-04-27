@@ -11,6 +11,7 @@ const NumberJumbotron = () => {
 
   const [totalConfirmedCases, setTotalConfirmedCases] = useState("");
   const [sourceLink, setSourceLink] = useState("");
+  const [dateLastUpdated, setDateLastUpdated] = useState("");
 
   var date = moment().format("MMMM, Do YYYY");
   // console.log(date);
@@ -22,7 +23,8 @@ const NumberJumbotron = () => {
         "https://v2-api.sheety.co/960adb5f12d13ecabd707300698d63cd/mercedCountyCovid19/currentDay"
       )
       .then(function (response) {
-        // console.log(response.data.currentDay[0]);
+        console.log(response.data.currentDay[0].date);
+        setDateLastUpdated(response.data.currentDay[0].date);
         setTotalConfirmedCases(response.data.currentDay[0].totalConfirmedCases);
         setSourceLink(response.data.currentDay[0].source);
       })
@@ -38,7 +40,7 @@ const NumberJumbotron = () => {
         <div className='display-1' style={{ color: "var(--dark-shades)" }}>
           {totalConfirmedCases === "" ? <Spinner /> : totalConfirmedCases}
         </div>
-        <p className='lead'>Last Updated: {date}</p>
+        <p className='lead'>Last Updated: {dateLastUpdated}</p>
         <p>
           Source:{" "}
           {sourceLink !== "" && (
