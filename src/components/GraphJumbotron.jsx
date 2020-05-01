@@ -39,6 +39,7 @@ const GraphJumbotron = () => {
         "4/28",
         "4/29",
         "4/30",
+        // Start New Month
       ],
       datasets: [
         {
@@ -74,6 +75,7 @@ const GraphJumbotron = () => {
             116,
             116,
             125,
+            // Start New Month
           ],
           backgroundColor: ["var(--test)"],
           borderWidth: 4,
